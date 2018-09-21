@@ -67,7 +67,7 @@
 
     // Add event listener
     document.body.addEventListener('click', clickHandler, false);
-    container.appendChild(clickCounterContainer);
+
     function generateImageGrid() {
         let imgContainer = document.createElement('div');
         let imgContainerRow = document.createElement('div');
@@ -93,7 +93,7 @@
         container.append(imgContainer);
     }
     function animalList(){
-        container.insertBefore(newContainer, siteHeader);
+        container.appendChild(newContainer);
         newContainer.appendChild(gridItem);
         newContainer.appendChild(cloneGrid);
         const aList = document.createElement('ul');
@@ -104,6 +104,7 @@
             aList.appendChild(listItem);
         });
         gridItem.appendChild(aList);
+        gridItem.appendChild(clickCounterContainer);
     }
     animalList();
 

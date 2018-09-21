@@ -44,14 +44,18 @@ body {
 }
 .grid{
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1em;
 }
 .grid-item{
-  display: grid;
-  // width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
+  img, figcaption {
+  width: 100%;
+  max-width: 55em;
+  }
+  h2.clickcounter {
+    margin-left: 35px;
+}
 }
 figure figcaption{
   font-weight: 700;
