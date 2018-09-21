@@ -64,6 +64,8 @@ figure figcaption{
 img {
   // display: block;
   width: 35rem;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 figcaption {
   text-align: center;
@@ -76,7 +78,30 @@ figcaption {
   }
 }
 #imgcontainer{
+
   ul {
     list-style: none;
+
+    li {
+      padding: 10px;
+    }
   }
+}
+.grid-item:first-of-type{
+
+    border-radius: 8px;
+    background-color: rgba(45, 52, 59, 0.541);
+
+}
+li.active {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #ffffff;
+}
+h1 {
+  color: dodgerblue;
+  border-top-color: rgb(10, 49, 107);
+  border-bottom-color: rgb(10, 49, 107);
+  border-top-style: solid;
+  border-bottom-style: solid;
 }

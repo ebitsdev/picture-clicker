@@ -119,6 +119,7 @@
         img.forEach(function (im, idx) {
             // Check if the target of the click event is the image
             if (e.target === im) {
+                im.className = 'active';
                 // Display the image the of the animal whose name was clicked
                 cloneGrid.innerHTML = `<figure><img src="${sourceImg[idx].url}" alt="${sourceImg[idx].name}"><figcaption>${sourceImg[idx].caption}</figcaption></figure>`;
                 clickCounter++;
@@ -129,6 +130,9 @@
                 if (clickCounter <= 1) {
                     clickCounterContainer.innerText = clickCounter + ' click';
                 }
+            }
+            else{
+                im.removeAttribute("class"); 
             }
         });
     }
