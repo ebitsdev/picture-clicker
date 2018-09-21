@@ -1,4 +1,4 @@
-# Picture Clicker
+# Picture Clicker project
 
 This repository creates a page with pictures that you can change by simply clicking on the animal name to the left.
 
