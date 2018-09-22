@@ -6,10 +6,6 @@
 (() => {
 
     // Create image source array
-    let imgSrc = ['//images.pexels.com/photos/259351/pexels-photo-259351.jpeg',
-    '//images.pexels.com/photos/750538/pexels-photo-750538.jpeg',
-    '//images.pexels.com/photos/861346/pexels-photo-861346.jpeg',
-    '//images.pexels.com/photos/34231/antler-antler-carrier-fallow-deer-hirsch.jpg'];
     let sourceImg = [{
             'name': 'Zebra',
             'url': '//images.pexels.com/photos/259351/pexels-photo-259351.jpeg',
@@ -67,6 +63,7 @@
 
     // Add event listener
     document.body.addEventListener('click', clickHandler, false);
+    document.body.addEventListener('touchstart', clickHandler, false);
 
     function generateImageGrid() {
         let imgContainer = document.createElement('div');
@@ -114,6 +111,7 @@
     //Set initial content for the image container
     cloneGrid.innerHTML = `<figure><img src="${sourceImg[0].url}" alt="${sourceImg[0].name}"><figcaption>${sourceImg[0].caption}</figcaption></figure>`;
     function clickHandler(e) {
+        e.preventDefault();
         const img = document.querySelectorAll('ul > li');
         // Record click events for each image
         img.forEach(function (im, idx) {
@@ -132,7 +130,7 @@
                 }
             }
             else{
-                im.removeAttribute("class"); 
+                im.removeAttribute("class");
             }
         });
     }

@@ -9,7 +9,7 @@ github: ebitsdev
 linkedin: https://www.linkedin.com/in/emmanuelbamba/
 gitrepo: udacity-fend-cat-clicker
 host: localhost
-port: 4019
+port: 4020
 
 # Build settings
 markdown: kramdown

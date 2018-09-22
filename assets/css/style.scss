@@ -51,7 +51,6 @@ body {
 .grid-item{
   img, figcaption {
   width: 100%;
-  max-width: 55em;
   }
   h2.clickcounter {
     margin-left: 35px;
@@ -62,10 +61,11 @@ figure figcaption{
 
 }
 img {
-  // display: block;
-  width: 35rem;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+}
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+  width: 100%;
 }
 figcaption {
   text-align: center;
