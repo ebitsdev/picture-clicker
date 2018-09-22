@@ -62,9 +62,10 @@
     container.appendChild(siteHeader);
 
     // Add event listener
-    document.body.addEventListener('click', clickHandler, false);
-    document.body.addEventListener('touchstart', clickHandler, false);
 
+    document.body.addEventListener('touchstart', clickHandler, false);
+    document.body.addEventListener('click', clickHandler, false);
+    
     function generateImageGrid() {
         let imgContainer = document.createElement('div');
         let imgContainerRow = document.createElement('div');
