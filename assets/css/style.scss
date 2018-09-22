@@ -66,7 +66,12 @@ img {
   border-top-left-radius: 8px;
 }
 @media only screen and (min-width : 320px) and (max-width : 768px) {
-  width: 100%;
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 1em;
+}
 }
 figcaption {
   text-align: center;
