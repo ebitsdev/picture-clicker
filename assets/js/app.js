@@ -65,7 +65,7 @@
 
     document.body.addEventListener('touchstart', clickHandler, false);
     document.body.addEventListener('click', clickHandler, false);
-    
+
     function generateImageGrid() {
         let imgContainer = document.createElement('div');
         let imgContainerRow = document.createElement('div');
@@ -112,7 +112,6 @@
     //Set initial content for the image container
     cloneGrid.innerHTML = `<figure><img src="${sourceImg[0].url}" alt="${sourceImg[0].name}"><figcaption>${sourceImg[0].caption}</figcaption></figure>`;
     function clickHandler(e) {
-        e.preventDefault();
         const img = document.querySelectorAll('ul > li');
         // Record click events for each image
         img.forEach(function (im, idx) {
@@ -134,6 +133,8 @@
                 im.removeAttribute("class");
             }
         });
+        e.preventDefault();
+        return false;
     }
 
 })();
